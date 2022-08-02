@@ -2,6 +2,7 @@
 alias sudo='sudo '
 
 # Git
+alias lg='lazygit'
 alias gs='git status'
 alias gc='git commit -m' # requires you to type a commit message
 alias gp='git pull'
