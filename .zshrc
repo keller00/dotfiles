@@ -2,7 +2,11 @@
 CASE_SENSITIVE="true"
 
 # User configuration
-export ZPLUG_HOME=/usr/local/opt/zplug
+if [[ -d "/usr/local/opt/zplug" ]]; then
+    export ZPLUG_HOME="/usr/local/opt/zplug"
+else
+    export ZPLUG_HOME="${HOME}/.zplug"
+fi
 source $ZPLUG_HOME/init.zsh
 
 zplug "plugins/git", as:plugin, from:oh-my-zsh
