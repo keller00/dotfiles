@@ -1,3 +1,8 @@
+#!/usr/bin/env zsh
+if [[ -f .aliases.local ]]; then
+    source .aliases.local
+fi
+
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 

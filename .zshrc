@@ -2,8 +2,8 @@
 CASE_SENSITIVE="true"
 
 # User configuration
-if [[ -d "/usr/local/opt/zplug" ]]; then
-    export ZPLUG_HOME="/usr/local/opt/zplug"
+if [[ -d /usr/local/opt/zplug ]]; then
+    export ZPLUG_HOME=/usr/local/opt/zplug
 else
     export ZPLUG_HOME="${HOME}/.zplug"
 fi
@@ -31,18 +31,18 @@ zplug load
 export EDITOR='nvim'
 
 if [[ -d "${HOME}/.bin" ]]; then
-    export PATH=${HOME}/.bin:$PATH
+    export PATH="${HOME}/.bin:${PATH}"
 fi
 
 if [[ -d "/usr/local/bin" ]]; then
-    export PATH="${PATH}:/usr/local/bin"
+    export PATH="/usr/local/bin:${PATH}"
 fi
 
-if [[ -f ~/.profile ]]; then
-  . ~/.profile
+if [[ -f .profile ]]; then
+  source .profile
 fi
 # Custom aliases
-if [[ -f ~/.aliases ]]; then
-  . ~/.aliases
+if [[ -f .aliases ]]; then
+  source .aliases
 fi
 # Note to future self: use .aliases for aliases, use .profile for local only settings, and this file is for everything else
