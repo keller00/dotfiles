@@ -2,8 +2,8 @@
 CASE_SENSITIVE="true"
 
 # User configuration
-if [[ -d /usr/local/opt/zplug ]]; then
-    export ZPLUG_HOME=/usr/local/opt/zplug
+if [[ -d "$(brew --prefix)/opt/zplug" ]]; then
+    export ZPLUG_HOME="$(brew --prefix)/opt/zplug"
 else
     export ZPLUG_HOME="${HOME}/.zplug"
 fi
