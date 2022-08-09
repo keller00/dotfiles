@@ -2,7 +2,7 @@
 CASE_SENSITIVE="true"
 
 # User configuration
-if [[ -d "$(brew --prefix)/opt/zplug" ]]; then
+if command -v brew && [[ -d "$(brew --prefix)/opt/zplug" ]]; then
     export ZPLUG_HOME="$(brew --prefix)/opt/zplug"
 else
     export ZPLUG_HOME="${HOME}/.zplug"
