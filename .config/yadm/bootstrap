@@ -1,0 +1,34 @@
+#!/bin/sh
+
+system_type=$(uname -s)
+
+    while true; do
+function yes_or_no {
+        read -p "$* [y/n]: " yn
+        case $yn in
+            [Yy]*) return 0  ;;
+            [Nn]*) return  1 ;;
+        esac
+    done
+}
+
+if [[ "$system_type" = "Darwin" ]]; then
+
+    # install homebrew if it's missing
+    if ! command -v brew >/dev/null 2>&1; then
+        yes_or_no "Should install install homebrew?" && \
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
+
+    if command -v brew >/dev/null 2>&1; then
+        yes_or_no "Should install ~/.Brewfile?" && \
+        brew bundle --global
+    fi
+
+elif [[ "$system_type" = "Linux" ]]; then
+    if ! command -v zplug >/dev/null 2>&1; then
+        yes_or_no "Should install zplug?" && \
+        curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+    fi
+    echo "Make sure neovim, 1password, and lazygit is installed"
+fi
