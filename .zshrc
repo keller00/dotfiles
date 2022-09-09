@@ -1,13 +1,17 @@
+if [[ -d "/usr/local/bin" ]]; then
+    export PATH="/usr/local/bin:${PATH}"
+fi
+
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
 
 # User configuration
-if command -v brew >/dev/null 2>&1 && [[ -d "$(brew --prefix)/opt/zplug" ]]; then
+if [[ -d "$(brew --prefix)/opt/zplug" ]]; then
     export ZPLUG_HOME="$(brew --prefix)/opt/zplug"
 else
     export ZPLUG_HOME="${HOME}/.zplug"
 fi
-source $ZPLUG_HOME/init.zsh
+. $ZPLUG_HOME/init.zsh
 
 zplug "plugins/git", as:plugin, from:oh-my-zsh
 zplug "agkozak/zsh-z", as:plugin, from:github
@@ -34,15 +38,11 @@ if [[ -d "${HOME}/.local/bin" ]]; then
     export PATH="${HOME}/.local/bin:${PATH}"
 fi
 
-if [[ -d "/usr/local/bin" ]]; then
-    export PATH="/usr/local/bin:${PATH}"
-fi
-
-if [[ -f .profile ]]; then
-  source .profile
+if [[ -f "${HOME}/.profile" ]]; then
+  . ${HOME}/.profile
 fi
 # Custom aliases
-if [[ -f .aliases ]]; then
-  source .aliases
+if [[ -f "${HOME}/.aliases" ]]; then
+  . ${HOME}/.aliases
 fi
 # Note to future self: use .aliases for aliases, use .profile for local only settings, and this file is for everything else
