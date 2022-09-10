@@ -1,7 +1,4 @@
-[alias]
-	# TBC
 [core]
-	# Use custom `.gitignore`
 	excludesfile = ~/.gitignore
 	# Treat spaces before tabs, and all kinds of trailing whitespace as an error
 	whitespace = space-before-tab,trailing-space
@@ -13,6 +10,7 @@
 	rebase = true
 [init]
 	defaultBranch = main
-
 [include]
-    path = .gitconfig.local
+	path = .gitconfig.local
+[diff]
+	external = difft
