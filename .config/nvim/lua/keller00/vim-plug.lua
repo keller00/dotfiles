@@ -26,6 +26,7 @@ plug.setup {
 'preservim/nerdtree'
 'Xuyuanp/nerdtree-git-plugin'
 
+'wellle/context.vim'
 'rose-pine/neovim'
 
 ''
