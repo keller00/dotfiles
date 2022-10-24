@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
-if [[ -f .aliases.local ]]; then
-    source .aliases.local
+if [[ -f "${HOME}/.aliases.local" ]]; then
+    . "${HOME}/.aliases.local"
 fi
 
 # Enable aliases to be sudo’ed
