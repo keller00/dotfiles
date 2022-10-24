@@ -2,7 +2,7 @@ if [[ -d "/usr/local/bin" ]]; then
     export PATH="/usr/local/bin:${PATH}"
 fi
 
-# Uncomment the following line to use case-sensitive completion.
+# Use case-sensitive completion.
 CASE_SENSITIVE="true"
 
 # User configuration
@@ -27,9 +27,6 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
 # Important PATH and other variables
 export EDITOR='nvim'
