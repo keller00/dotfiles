@@ -42,4 +42,8 @@ fi
 if [[ -f "${HOME}/.aliases" ]]; then
   . ${HOME}/.aliases
 fi
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # Note to future self: use .aliases for aliases, use .profile for local only settings, and this file is for everything else
