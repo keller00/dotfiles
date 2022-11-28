@@ -45,6 +45,7 @@ fi
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey "\e[3~" delete-char
 
 eval "$(aactivator init)"
 
