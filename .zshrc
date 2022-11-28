@@ -46,4 +46,6 @@ fi
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
+eval "$(aactivator init)"
+
 # Note to future self: use .aliases for aliases, use .profile for local only settings, and this file is for everything else

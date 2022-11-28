@@ -2,8 +2,8 @@
 
 system_type=$(uname -s)
 
-    while true; do
 function yes_or_no {
+    while true; do
         read -p "$* [y/n]: " yn
         case $yn in
             [Yy]*) return 0  ;;
@@ -24,11 +24,27 @@ if [[ "$system_type" = "Darwin" ]]; then
         yes_or_no "Should install ~/.Brewfile?" && \
         brew bundle --global
     fi
-
 elif [[ "$system_type" = "Linux" ]]; then
     if ! command -v zplug >/dev/null 2>&1; then
         yes_or_no "Should install zplug?" && \
         curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
     fi
-    echo "Make sure neovim, 1password, and lazygit is installed"
 fi
+
+PYTHON_VER="3.11"
+HOME_PYTHON_LOC=".local/opt/venv"
+PYTHON="python${PYTHON_VER}"
+if command -v ${PYTHON} >/dev/null 2>&1; then
+    yes_or_no "Should setup home Python ${PYTHON_VER}?" && \
+    ${PYTHON} -m venv ${HOME_PYTHON_LOC} && \
+    . ${HOME_PYTHON_LOC}/bin/activate && \
+    pip install -U pip setuptools wheel && \
+    pip install pre-commit virtualenv tox aactivator && \
+    ln -s ~/.local/opt/venv/bin/pre-commit ~/.local/bin/pre-commit && \
+    ln -s ~/.local/opt/venv/bin/tox ~/.local/bin/tox && \
+    ln -s ~/.local/opt/venv/bin/aactivator ~/.local/bin/aactivator && \
+    ln -s ~/.local/opt/venv/bin/virtualenv ~/.local/bin/virtualenv && \
+    deactivate
+fi
+
+echo "Make sure neovim, 1password, and lazygit is installed"
