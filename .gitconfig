@@ -11,6 +11,6 @@
 [init]
 	defaultBranch = main
 [include]
-	path = .gitconfig.local
+    path = .gitconfig.local
 [diff]
-	external = difft
+    #external = difft

@@ -6,6 +6,8 @@ fi
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+alias la='ls -la'
+
 # Git
 alias lg='lazygit'
 alias gs='git status'

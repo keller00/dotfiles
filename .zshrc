@@ -49,6 +49,29 @@ bindkey "^[[3~" delete-char
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 
+# Make virtualenvs reproducible
+export VIRTUALENV_PIP="embed"
+export VIRTUALENV_SETUPTOOLS="embed"
+export VIRTUALENV_WHEEL="embed"
+export VIRTUALENV_NO_PERIODIC_UPDATE="True"
+
 eval "$(aactivator init)"
 
 # Note to future self: use .aliases for aliases, use .profile for local only settings, and this file is for everything else
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+conda deactivate
