@@ -1,3 +1,17 @@
+zstyle ':completion:*' completer _complete _ignored _correct
+zstyle ':completion:*' max-errors 3
+zstyle :compinstall filename '/Users/mark/.zshrc'
+
+autoload -Uz compinit
+compinit
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt nomatch notify
+unsetopt autocd beep extendedglob
+bindkey -v
+
+# End of lines configured by zsh-newuser-install
 if [[ -d "/usr/local/bin" ]]; then
     export PATH="/usr/local/bin:${PATH}"
 fi
@@ -58,20 +72,3 @@ export VIRTUALENV_NO_PERIODIC_UPDATE="True"
 eval "$(aactivator init)"
 
 # Note to future self: use .aliases for aliases, use .profile for local only settings, and this file is for everything else
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-conda deactivate
