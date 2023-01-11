@@ -27,3 +27,4 @@ vim.opt.updatetime = 50  -- trigger coffee making event quickly
 vim.opt.undofile = true  -- save an undofile to undodir
 
 vim.g.mapleader = " "
+vim.opt.termguicolors = true -- rgb terminal colors
