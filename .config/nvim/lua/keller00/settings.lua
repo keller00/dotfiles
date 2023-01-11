@@ -24,5 +24,6 @@ vim.opt.swapfile = false  -- don't use swapfiles
 vim.opt.wb = false  -- don't create backup file before overwriting file
 vim.opt.backup = false  -- don't keep the backup file around afterwards
 vim.opt.updatetime = 50  -- trigger coffee making event quickly
+vim.opt.undofile = true  -- save an undofile to undodir
 
 vim.g.mapleader = " "
