@@ -9,7 +9,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt nomatch notify
 unsetopt autocd beep extendedglob
-bindkey -v
 
 # End of lines configured by zsh-newuser-install
 if [[ -d "/usr/local/bin" ]]; then
@@ -60,9 +59,9 @@ fi
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey "^[[3~" delete-char
-bindkey  "^[[H"   beginning-of-line
-bindkey  "^[[F"   end-of-line
-bindkey '^R' history-incremental-search-backward
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+bindkey "^R" history-incremental-search-backward
 
 # Make virtualenvs reproducible
 export VIRTUALENV_PIP="embed"
