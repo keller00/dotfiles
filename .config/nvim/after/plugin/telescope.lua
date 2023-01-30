@@ -6,4 +6,3 @@ nmap('<C-p>', builtin.git_files)
 nmap('<leader>fs', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
-

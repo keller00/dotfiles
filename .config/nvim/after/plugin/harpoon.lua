@@ -1,7 +1,7 @@
 local nmap = require("keller00.keymap").nmap
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
- 
+
 nmap('<leader>a', mark.add_file)
 nmap('<C-e>', ui.toggle_quick_menu)
 
