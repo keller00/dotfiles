@@ -30,6 +30,7 @@ zplug "plugins/git", as:plugin, from:oh-my-zsh
 zplug "agkozak/zsh-z", as:plugin, from:github
 zplug "zsh-users/zsh-autosuggestions", as:plugin, from:github
 zplug "dikiaap/dotfiles", as:theme, from:github, use:.oh-my-zsh/themes/oxide.zsh-theme
+zplug "olets/zsh-window-title", as:plugin, from:github
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
