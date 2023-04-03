@@ -25,6 +25,7 @@ vim.opt.wb = false  -- don't create backup file before overwriting file
 vim.opt.backup = false  -- don't keep the backup file around afterwards
 vim.opt.updatetime = 50  -- trigger coffee making event quickly
 vim.opt.undofile = true  -- save an undofile to undodir
+vim.opt.signcolumn = "yes"
 
 vim.g.mapleader = " "
 vim.opt.termguicolors = true -- rgb terminal colors

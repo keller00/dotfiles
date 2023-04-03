@@ -34,6 +34,7 @@ plug.setup {
     'nvim-treesitter/nvim-treesitter',
     options = { ['do'] = ':TSUpdate' }
 }
+'nvim-treesitter/nvim-treesitter-context'
 'nvim-treesitter/playground'
 'ThePrimeagen/harpoon'
 'mbbill/undotree'
