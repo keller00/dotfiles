@@ -39,14 +39,11 @@ if command -v ${PYTHON} >/dev/null 2>&1; then
     ${PYTHON} -m venv ${HOME_PYTHON_LOC} && \
     . ${HOME_PYTHON_LOC}/bin/activate && \
     pip install -U pip setuptools wheel && \
-    pip install -U pre-commit virtualenv tox aactivator pipx all-repos && \
+    pip install -U all-repos pipx && \
+    for dep in pre-commit virtualenv tox aactivator ; do
+        pipx install ${dep}
+    done
     deactivate
-    # Setup symlinks
-    ln -fs ~/.local/opt/venv/bin/pre-commit ~/.local/bin/pre-commit && \
-    ln -fs ~/.local/opt/venv/bin/tox ~/.local/bin/tox && \
-    ln -fs ~/.local/opt/venv/bin/aactivator ~/.local/bin/aactivator && \
-    ln -fs ~/.local/opt/venv/bin/virtualenv ~/.local/bin/virtualenv && \
-    ln -fs ~/.local/opt/venv/bin/pipx ~/.local/bin/pipx && \
     # Setup all-repos symlinks
     pushd ~/.local/opt/venv/bin > /dev/null && \
         ls all-repos-* | xargs -I % ln -fs ~/.local/opt/venv/bin/% ~/.local/bin/% && \
