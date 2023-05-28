@@ -39,6 +39,7 @@ plug.setup {
 'ThePrimeagen/harpoon'
 'mbbill/undotree'
 'tpope/vim-fugitive'
+'christoomey/vim-tmux-navigator'
 'folke/zen-mode.nvim'
 
 'wellle/context.vim'
