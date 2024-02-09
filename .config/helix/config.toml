@@ -1,0 +1,8 @@
+theme = "sonokai"
+
+[editor]
+line-number = "relative"
+
+[keys.normal]
+"space" = {c = [":config-open"]}
+
