@@ -20,3 +20,6 @@ alias gl='git log --oneline --stat'
 ### Neovim aliases
 alias v='nvim'
 alias vim='nvim'
+
+### Helix aliases
+alias h='hx'
