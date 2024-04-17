@@ -4,9 +4,21 @@ zstyle :compinstall filename '${HOME}/.zshrc'
 
 autoload -Uz compinit
 compinit
-HISTFILE=${HOME}/.histfile
+
+# History related settings
+HISTFILE="$HOME/.zsh_history"
 HISTSIZE=1000
 SAVEHIST=1000
+HISTORY_IGNORE="(ls|cd|pwd|exit|cd)*"
+setopt INC_APPEND_HISTORY    # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY         # Share history between all sessions.
+setopt HIST_IGNORE_DUPS      # Do not record an event that was just recorded again.
+setopt HIST_IGNORE_SPACE     # Do not record an event starting with a space.
+setopt HIST_NO_STORE         # Don't store history commands
+setopt HIST_REDUCE_BLANKS    # Remove superfluous blanks from each command line being added to the history.
+HIST_STAMPS="yyyy-mm-dd"     # Add timstamps to history entries.
+export FZF_DEFAULT_COMMAND='ag --hidden -g ""'  # Make sure ag is installed
+
 setopt nomatch notify
 unsetopt autocd beep extendedglob
 
@@ -27,6 +39,7 @@ fi
 . $ZPLUG_HOME/init.zsh
 
 zplug "plugins/git", as:plugin, from:oh-my-zsh
+zplug "plugins/fzf", as:plugin, from:oh-my-zsh
 zplug "agkozak/zsh-z", as:plugin, from:github
 zplug "zsh-users/zsh-autosuggestions", as:plugin, from:github
 zplug "dikiaap/dotfiles", as:theme, from:github, use:.oh-my-zsh/themes/oxide.zsh-theme
