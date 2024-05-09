@@ -10,6 +10,7 @@ cask "arc"
 cask "spotify"
 cask "notion"
 cask "iterm2"
+cask "readwise-ibooks"
 # Is this the right way to install vs code on Mac?
 # cask "visual-studio-code"
 
