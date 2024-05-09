@@ -1,12 +1,16 @@
+# Run with: `brew bundle --global`
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 brew "lazygit"
 brew "neovim"
-brew "python@3.10"
-brew "python@3.9"
+brew "python@3.12"
 brew "yadm"
 brew "zplug"
 cask "1password"
+cask "arc"
+cask "spotify"
 cask "notion"
-cask "visual-studio-code"
+cask "iterm2"
+# Is this the right way to install vs code on Mac?
+# cask "visual-studio-code"
+
+# TODO: initiate vscode login on GitHub to sync settings?

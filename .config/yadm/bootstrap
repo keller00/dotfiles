@@ -21,6 +21,7 @@ if [[ "$system_type" = "Darwin" ]]; then
     fi
 
     if command -v brew >/dev/null 2>&1; then
+        brew analytics off
         yes_or_no "Should install ~/.Brewfile?" && \
         brew bundle --global
     fi
