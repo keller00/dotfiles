@@ -11,6 +11,7 @@ cask "spotify"
 cask "notion"
 cask "iterm2"
 cask "readwise-ibooks"
+cask "discord"
 # Is this the right way to install vs code on Mac?
 # cask "visual-studio-code"
 
