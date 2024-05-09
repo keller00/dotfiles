@@ -31,7 +31,7 @@ elif [[ "$system_type" = "Linux" ]]; then
     fi
 fi
 
-PYTHON_VER="3.11"
+PYTHON_VER="3.12"
 HOME_PYTHON_LOC=".local/opt/venv"
 PYTHON="python${PYTHON_VER}"
 if command -v ${PYTHON} >/dev/null 2>&1; then
