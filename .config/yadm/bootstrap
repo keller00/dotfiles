@@ -44,6 +44,7 @@ if command -v ${PYTHON} >/dev/null 2>&1; then
     for dep in pre-commit virtualenv tox aactivator ; do
         pipx install ${dep}
     done
+    pre-commit init-templatedir ~/.git-template
     deactivate
     # Setup all-repos symlinks
     pushd ~/.local/opt/venv/bin > /dev/null && \
