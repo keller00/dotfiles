@@ -2,20 +2,6 @@ local lsp = require("lsp-zero")
 local nnoremap = require("keller00.keymap").nnoremap
 
 lsp.preset("recommended")
-local cmp = require("cmp")
-local cmp_select = { behavior = cmp.SelectBehavior.Select }
-local cmp_mappings = lsp.defaults.cmp_mappings({
-    ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-    ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-    ['<C-Space>'] = cmp.mapping.complete(),
-})
-
--- REMOVED for info see: https://lsp-zero.netlify.app/v2.x/reference/deprecated.html#setup-nvim-cmp-opts
--- lsp.setup_nvim_cmp({
---     mapping = cmp_mappings
--- })
-
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
 
