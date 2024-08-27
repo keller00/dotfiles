@@ -38,7 +38,6 @@ else
 fi
 . $ZPLUG_HOME/init.zsh
 
-zplug "plugins/git", as:plugin, from:oh-my-zsh
 zplug "plugins/fzf", as:plugin, from:oh-my-zsh
 zplug "agkozak/zsh-z", as:plugin, from:github
 zplug "zsh-users/zsh-autosuggestions", as:plugin, from:github
@@ -88,6 +87,8 @@ export VIRTUALENV_NO_PERIODIC_UPDATE="True"
 
 eval "$(aactivator init)"
 
+# Setup zsh plugins
+. ".config/zsh/plugins/git/git.plugin.zsh"
 # Setup my zsh theme
 . ".config/zsh/themes/oxide/oxide.zsh-theme"
 
