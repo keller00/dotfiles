@@ -38,8 +38,6 @@ else
 fi
 . $ZPLUG_HOME/init.zsh
 
-zplug "plugins/fzf", as:plugin, from:oh-my-zsh
-zplug "agkozak/zsh-z", as:plugin, from:github
 zplug "zsh-users/zsh-autosuggestions", as:plugin, from:github
 zplug "olets/zsh-window-title", as:plugin, from:github
 
