@@ -42,7 +42,6 @@ zplug "plugins/git", as:plugin, from:oh-my-zsh
 zplug "plugins/fzf", as:plugin, from:oh-my-zsh
 zplug "agkozak/zsh-z", as:plugin, from:github
 zplug "zsh-users/zsh-autosuggestions", as:plugin, from:github
-zplug "dikiaap/dotfiles", as:theme, from:github, use:.oh-my-zsh/themes/oxide.zsh-theme
 zplug "olets/zsh-window-title", as:plugin, from:github
 
 # Install plugins if there are plugins that have not been installed
@@ -88,6 +87,9 @@ export VIRTUALENV_WHEEL="embed"
 export VIRTUALENV_NO_PERIODIC_UPDATE="True"
 
 eval "$(aactivator init)"
+
+# Setup my zsh theme
+. ".config/zsh/themes/oxide/oxide.zsh-theme"
 
 # Note to future self: use .aliases for aliases, use .profile for local only settings, and this file is for everything else
 
