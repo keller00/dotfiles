@@ -62,6 +62,10 @@ if [[ -d "${HOME}/.local/bin" ]]; then
     export PATH="${HOME}/.local/bin:${PATH}"
 fi
 
+if [[ -f "${HOME}/.cargo/env" ]]; then
+  . "$HOME/.cargo/env"
+fi
+
 if [[ -f "${HOME}/.profile" ]]; then
   . ${HOME}/.profile
 fi
@@ -86,3 +90,4 @@ export VIRTUALENV_NO_PERIODIC_UPDATE="True"
 eval "$(aactivator init)"
 
 # Note to future self: use .aliases for aliases, use .profile for local only settings, and this file is for everything else
+
