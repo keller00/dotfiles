@@ -30,25 +30,6 @@ fi
 # Use case-sensitive completion.
 CASE_SENSITIVE="true"
 
-# User configuration
-if command -v brew >/dev/null 2>&1 && [[ -d "$(brew --prefix)/opt/zplug" ]]; then
-    export ZPLUG_HOME="$(brew --prefix)/opt/zplug"
-else
-    export ZPLUG_HOME="${HOME}/.zplug"
-fi
-. $ZPLUG_HOME/init.zsh
-
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-zplug load
-
 # Important PATH and other variables
 export EDITOR='nvim'
 
