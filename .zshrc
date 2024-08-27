@@ -38,7 +38,6 @@ else
 fi
 . $ZPLUG_HOME/init.zsh
 
-zplug "zsh-users/zsh-autosuggestions", as:plugin, from:github
 zplug "olets/zsh-window-title", as:plugin, from:github
 
 # Install plugins if there are plugins that have not been installed
@@ -87,6 +86,8 @@ eval "$(aactivator init)"
 
 # Setup zsh plugins
 . ".config/zsh/plugins/git/git.plugin.zsh"
+# Setup zsh plugins
+. ".config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
 # Setup my zsh theme
 . ".config/zsh/themes/oxide/oxide.zsh-theme"
 
