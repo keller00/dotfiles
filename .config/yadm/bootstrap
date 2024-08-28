@@ -27,7 +27,7 @@ if [[ "$system_type" = "Darwin" ]]; then
     fi
 fi
 
-PYTHON_VER="3.12"
+PYTHON_VER="3"
 HOME_PYTHON_LOC=".local/opt/venv"
 PYTHON="python${PYTHON_VER}"
 if command -v ${PYTHON} >/dev/null 2>&1; then
