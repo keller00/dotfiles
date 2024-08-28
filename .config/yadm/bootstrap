@@ -43,7 +43,7 @@ if command -v ${PYTHON} >/dev/null 2>&1; then
     deactivate
     # Setup all-repos symlinks
     pushd ~/.local/opt/venv/bin > /dev/null && \
-        ls all-repos-* | xargs -I % ln -fs ~/.local/opt/venv/bin/% ~/.local/bin/% && \
+        ls all-repos-* pipx | xargs -I % ln -fs ~/.local/opt/venv/bin/% ~/.local/bin/% && \
     popd > /dev/null
 fi
 
