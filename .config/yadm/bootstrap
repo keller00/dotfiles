@@ -36,7 +36,7 @@ if command -v ${PYTHON} >/dev/null 2>&1; then
     . ${HOME_PYTHON_LOC}/bin/activate && \
     pip install -U pip setuptools wheel && \
     pip install -U all-repos pipx && \
-    for dep in pre-commit virtualenv tox aactivator ; do
+    for dep in pre-commit virtualenv hatch aactivator ; do
         pipx install ${dep}
     done
     pre-commit init-templatedir ~/.git-template
