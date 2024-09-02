@@ -65,12 +65,12 @@ export VIRTUALENV_NO_PERIODIC_UPDATE="True"
 eval "$(aactivator init)"
 
 # Setup zsh plugins
-. ".config/zsh/plugins/git/git.plugin.zsh"
-. ".config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
-. ".config/zsh/plugins/zsh-window-title/zsh-window-title.plugin.zsh"
+. "${HOME}/.config/zsh/plugins/git/git.plugin.zsh"
+. "${HOME}/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
+. "${HOME}/.config/zsh/plugins/zsh-window-title/zsh-window-title.plugin.zsh"
 
 # Setup my zsh theme
-. ".config/zsh/themes/oxide/oxide.zsh-theme"
+. "${HOME}/.config/zsh/themes/oxide/oxide.zsh-theme"
 
 # Note to future self: use .aliases for aliases, use .profile for local only settings, and this file is for everything else
 
