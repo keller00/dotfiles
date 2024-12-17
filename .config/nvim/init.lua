@@ -1,1 +1,1 @@
-require("keller00")
+require("config.lazy")
