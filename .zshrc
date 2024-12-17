@@ -72,5 +72,5 @@ eval "$(aactivator init)"
 # Setup my zsh theme
 . "${HOME}/.config/zsh/themes/oxide/oxide.zsh-theme"
 
+eval "$(zellij setup --generate-auto-start zsh)"
 # Note to future self: use .aliases for aliases, use .profile for local only settings, and this file is for everything else
-
