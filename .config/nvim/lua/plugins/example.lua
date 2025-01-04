@@ -12,14 +12,6 @@ return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 
-  -- Configure LazyVim to load gruvbox
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "rose-pine",
-    },
-  },
-
   -- change trouble config
   {
     "folke/trouble.nvim",
