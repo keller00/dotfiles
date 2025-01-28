@@ -1,8 +1,0 @@
-theme = "rose_pine_moon"
-
-[editor]
-line-number = "relative"
-
-[keys.normal.space]
-c = [":config-open"]
-r = [":config-reload"]
