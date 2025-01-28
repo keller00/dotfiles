@@ -6,15 +6,21 @@ These are my dotfiles managed by [stow](https://www.gnu.org/software/stow/).
 
 1. Install stow
 
+    ```sh
     brew install stow
+    ```
 
 2. Clone this repository
 
-    git clone <git@github.com>:keller00/dotfiles
+    ```sh
+    git clone git@github.com:keller00/dotfiles
+    ```
 
 3. Install the symlinks
 
+    ```sh
     stow --target=~ .
+    ```
 
 ## Get rid of dotfiles
 
