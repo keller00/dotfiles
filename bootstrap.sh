@@ -47,4 +47,7 @@ if command -v ${PYTHON} >/dev/null 2>&1; then
     popd > /dev/null
 fi
 
+echo "Setting up ~/.git-template"
+pre-commit init-templatedir ~/.git-template
+
 echo "Make sure neovim, 1password, and lazygit is installed"
