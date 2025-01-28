@@ -1,3 +1,21 @@
 # dotfiles
 
-These are my dotfiles managed by [yadm](www.yadm.io).
+These are my dotfiles managed by [stow](https://www.gnu.org/software/stow/).
+
+## Setting up
+
+1. Install stow
+
+    brew install stow
+
+2. Clone this repository
+
+    git clone <git@github.com>:keller00/dotfiles
+
+3. Install the symlinks
+
+    stow --target=~ .
+
+## Get rid of dotfiles
+
+Simply execute `stow -D --target=~ .`
