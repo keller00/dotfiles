@@ -1,6 +1,4 @@
 .activate.sh
 .deactivate.sh
-.idea
-.vscode
 .tox
 .mypy_cache

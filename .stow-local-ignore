@@ -1,5 +1,6 @@
 ^/.git/
 ^/bootstrap.sh
+^/.pre-commit-config.yaml
 ^/.Brewfile
 ^/README.*
 ^/LICENSE.*
