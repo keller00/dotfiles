@@ -19,9 +19,9 @@ These are my dotfiles managed by [stow](https://www.gnu.org/software/stow/).
 3. Install the symlinks
 
     ```sh
-    stow --target=~ .
+    stow --target ~ .
     ```
 
 ## Get rid of dotfiles
 
-Simply execute `stow -D --target=~ .`
+Simply execute `stow --delete --target ~ .`
