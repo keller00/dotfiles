@@ -2,6 +2,6 @@
 \.git
 \.pre-commit-config.yaml
 
-^/bootstrap.sh
-^/README.*
-^/LICENSE.*
+bootstrap.sh
+README.*
+LICENSE.*
