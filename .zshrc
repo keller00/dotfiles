@@ -55,6 +55,7 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^R" history-incremental-search-backward
 bindkey "\e[3~" delete-char
+bindkey "^?" backward-delete-char
 
 # Make virtualenvs reproducible
 export VIRTUALENV_PIP="embed"
