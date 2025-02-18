@@ -11,8 +11,9 @@ return {
         {
           pane = 2,
           section = "terminal",
-          cmd = "colorscript.sh -e square",
-          height = 5,
+          cmd = "colorscript.sh -e tiefighter1row",
+          height = 8,
+          width = 53,
           padding = 1,
         },
         { section = "keys", gap = 1, padding = 1 },
