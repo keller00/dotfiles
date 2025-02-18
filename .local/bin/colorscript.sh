@@ -3,7 +3,7 @@
 # Simple CLI for shell-color-scripts
 
 SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
-DIR_COLORSCRIPTS="${SCRIPT_DIR}/colorscripts"
+DIR_COLORSCRIPTS="${SCRIPT_DIR}/colorscripts/"
 
 if command -v find &>/dev/null; then
   LS_CMD="$(command -v find) ${DIR_COLORSCRIPTS} -maxdepth 1 -type f"
