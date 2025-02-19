@@ -1,5 +1,8 @@
-font-size = 99
+theme = "Everforest Dark - Hard"
+font-size = 16
 font-family = ""
 font-family = "MonoLisa"
 font-family = "Symbols Nerd Font Mono"
-theme = "Everforest Dark - Hard"
+mouse-hide-while-typing = true
+macos-option-as-alt = true
+window-decoration = true
