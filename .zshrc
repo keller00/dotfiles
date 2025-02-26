@@ -31,6 +31,7 @@ fi
 CASE_SENSITIVE="true"
 
 # Important PATH and other variables
+export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR='nvim'
 
 if [[ -d "${HOME}/.local/bin" ]]; then
