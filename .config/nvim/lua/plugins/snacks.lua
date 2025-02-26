@@ -38,6 +38,11 @@ return {
     },
     indent = { enabled = true },
     input = { enabled = true },
+    picker = {
+      sources = {
+        explorer = { hidden = true },
+      },
+    },
     notifier = {
       enabled = true,
       timeout = 3000,
