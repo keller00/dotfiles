@@ -14,3 +14,17 @@
     path = ~/.gitconfig.local
 [rebase]
 	autoStash = true
+	autoSquash = true
+	updateRefs = true
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[push]
+	autoSetupRemote = true
+[fetch]
+	prune = true
+	pruneTags = true
+[help]
+	autocorrect = prompt
