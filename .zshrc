@@ -74,6 +74,8 @@ eval "$(aactivator init)"
 # Setup my zsh theme
 . "${HOME}/.config/zsh/themes/oxide/oxide.zsh-theme"
 
+source <(fzf --zsh)
+
 if [ "$TERM" = "xterm-ghostty" ]; then
   export ZELLIJ_AUTO_EXIT="true"
   eval "$(zellij setup --generate-auto-start zsh)"
