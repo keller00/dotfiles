@@ -48,4 +48,4 @@ fi
 echo "Setting up ${HOME_DIR}/.git-template"
 pre-commit init-templatedir "${HOME_DIR}/.git-template"
 
-echo "Make sure neovim, 1password, and lazygit is installed"
+echo "Make sure neovim, 1password, lazygit and ghostty is installed"
