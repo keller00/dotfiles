@@ -1,3 +1,5 @@
 vim.g.autoformat = false
-vim.opt.clipboard = 'unnamedplus'
-vim.g.clipboard = 'osc52'
+if vim.env.CWS == 1 then
+  vim.opt.clipboard = 'unnamedplus'
+  vim.g.clipboard = 'osc52'
+end
