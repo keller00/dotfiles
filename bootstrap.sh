@@ -1,6 +1,13 @@
 #!/bin/sh
 
 system_type=$(uname -s)
+THIS_DIR=$(dirname "$0")
+PYTHON_VER="3"
+HOME_DIR="${HOME}"
+HOME_PYTHON_LOC="${HOME_DIR}/.local/opt/venv"
+PYTHON="python${PYTHON_VER}"
+
+(cd "${THIS_DIR}" && stow --delete . || true && mkdir -p "${HOME_DIR}/.local/bin" && stow .)
 
 function yes_or_no {
     while true; do
@@ -27,27 +34,18 @@ if [[ "$system_type" = "Darwin" ]]; then
     fi
 fi
 
-PYTHON_VER="3"
-HOME_PYTHON_LOC=".local/opt/venv"
-PYTHON="python${PYTHON_VER}"
 if command -v ${PYTHON} >/dev/null 2>&1; then
     yes_or_no "Should setup home Python ${PYTHON_VER}?" && \
     ${PYTHON} -m venv ${HOME_PYTHON_LOC} && \
     . ${HOME_PYTHON_LOC}/bin/activate && \
     pip install -U pip setuptools wheel && \
-    pip install -U all-repos pipx && \
-    for dep in pre-commit virtualenv hatch aactivator ; do
-        pipx install ${dep}
-    done
-    pre-commit init-templatedir ~/.git-template
+    pip install -U pipx && \
+    pipx install --force pre-commit virtualenv hatch aactivator all-repos &&
+    pre-commit init-templatedir "${HOME_DIR}/.git-template"
     deactivate
-    # Setup all-repos symlinks
-    pushd ~/.local/opt/venv/bin > /dev/null && \
-        ls all-repos-* pipx | xargs -I % ln -fs ~/.local/opt/venv/bin/% ~/.local/bin/% && \
-    popd > /dev/null
 fi
 
-echo "Setting up ~/.git-template"
-pre-commit init-templatedir ~/.git-template
+echo "Setting up ${HOME_DIR}/.git-template"
+pre-commit init-templatedir "${HOME_DIR}/.git-template"
 
 echo "Make sure neovim, 1password, and lazygit is installed"
