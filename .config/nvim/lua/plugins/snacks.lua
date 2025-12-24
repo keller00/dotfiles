@@ -41,6 +41,7 @@ return {
     picker = {
       sources = {
         explorer = { hidden = true , follow_file = true},
+        files = { hidden = true },
       },
     },
     notifier = {
