@@ -40,7 +40,7 @@ return {
     input = { enabled = true },
     picker = {
       sources = {
-        explorer = { hidden = true },
+        explorer = { hidden = true , follow_file = true},
       },
     },
     notifier = {
