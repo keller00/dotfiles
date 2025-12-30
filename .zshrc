@@ -70,6 +70,7 @@ eval "$(aactivator init)"
 . "${HOME}/.config/zsh/plugins/git/git.plugin.zsh"
 . "${HOME}/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
 . "${HOME}/.config/zsh/plugins/zsh-window-title/zsh-window-title.plugin.zsh"
+. "${HOME}/.config/zsh/plugins/zsh-z/zsh-z.plugin.zsh"
 
 # Setup my zsh theme
 . "${HOME}/.config/zsh/themes/oxide/oxide.zsh-theme"
