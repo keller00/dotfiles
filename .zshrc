@@ -82,3 +82,14 @@ if [ "$TERM" = "xterm-ghostty" ]; then
   eval "$(zellij setup --generate-auto-start zsh)"
 fi
 # Note to future self: use .aliases for aliases, use .profile for local only settings, and this file is for everything else
+
+# Haskell development
+if [[ -d "${HOME}/.ghcup/bin" ]]; then
+  export PATH="${HOME}/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+fi
+
+# Added by LM Studio CLI (lms)
+if [[ -d "${HOME}/.lmstudio/bin" ]]; then
+  export PATH="$PATH:${HOME}/.lmstudio/bin"
+fi
+# End of LM Studio CLI section
