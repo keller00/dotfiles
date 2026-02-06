@@ -40,7 +40,7 @@ if command -v ${PYTHON} >/dev/null 2>&1; then
     . ${HOME_PYTHON_LOC}/bin/activate && \
     pip install -U pip setuptools wheel && \
     pip install -U pipx && \
-    pipx install --force pre-commit virtualenv hatch aactivator all-repos &&
+    pipx install --force pre-commit virtualenv all-repos &&
     pre-commit init-templatedir "${HOME_DIR}/.git-template"
     deactivate
 fi

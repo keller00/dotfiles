@@ -64,7 +64,8 @@ export VIRTUALENV_SETUPTOOLS="embed"
 export VIRTUALENV_WHEEL="embed"
 export VIRTUALENV_NO_PERIODIC_UPDATE="True"
 
-eval "$(aactivator init)"
+eval "$(direnv hook zsh)"
+
 
 # Setup zsh plugins
 . "${HOME}/.config/zsh/plugins/git/git.plugin.zsh"
