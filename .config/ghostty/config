@@ -8,3 +8,23 @@ font-family = JetBrainsMono Nerd Font
 mouse-hide-while-typing = true
 macos-option-as-alt = true
 auto-update-channel = tip
+
+keybind = alt+n=new_window
+
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:bottom
+keybind = alt+k=goto_split:top
+keybind = alt+l=goto_split:right
+
+keybind = alt+a>h=new_split:left
+keybind = alt+a>j=new_split:down
+keybind = alt+a>k=new_split:up
+keybind = alt+a>l=new_split:right
+keybind = alt+a>f=toggle_split_zoom
+
+keybind = alt+a>n=next_tab
+keybind = alt+a>p=previous_tab
+
+keybind = super+r=reload_config
+
+window-save-state = always

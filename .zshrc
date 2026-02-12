@@ -78,10 +78,6 @@ eval "$(direnv hook zsh)"
 
 source <(fzf --zsh)
 
-if [ "$TERM" = "xterm-ghostty" ]; then
-  export ZELLIJ_AUTO_EXIT="true"
-  eval "$(zellij setup --generate-auto-start zsh)"
-fi
 # Note to future self: use .aliases for aliases, use .profile for local only settings, and this file is for everything else
 
 # Haskell development
