@@ -8,6 +8,8 @@ font-family = JetBrainsMono Nerd Font
 mouse-hide-while-typing = true
 macos-option-as-alt = true
 auto-update-channel = tip
+macos-titlebar-proxy-icon = hidden
+cursor-style = block
 
 keybind = alt+n=new_window
 
