@@ -3,13 +3,16 @@ clipboard-read = allow
 clipboard-write = allow
 window-decoration = true
 window-step-resize = true
-font-size = 14
+font-size = 15
 font-family = JetBrainsMono Nerd Font
 mouse-hide-while-typing = true
 macos-option-as-alt = true
 auto-update-channel = tip
 macos-titlebar-proxy-icon = hidden
 cursor-style = block
+
+window-padding-x = 20
+window-padding-y = 20
 
 keybind = alt+n=new_window
 
