@@ -1,8 +1,16 @@
+# Repo / dev files
 \.Brewfile
 \.git
+\.gitignore
 \.pre-commit-config.yaml
 \.envrc
+\.direnv
+\.stowrc
 
-bootstrap.sh
-README.*
-LICENSE.*
+# Nix
+shell\.nix
+
+# Docs / scripts
+bootstrap\.sh
+README\..*
+LICENSE\..*
