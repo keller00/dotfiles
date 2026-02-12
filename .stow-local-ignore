@@ -1,6 +1,7 @@
 \.Brewfile
 \.git
 \.pre-commit-config.yaml
+\.envrc
 
 bootstrap.sh
 README.*
