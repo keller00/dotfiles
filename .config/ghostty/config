@@ -11,6 +11,9 @@ auto-update-channel = tip
 macos-titlebar-proxy-icon = hidden
 cursor-style = block
 
+window-height = 26
+window-width = 80
+
 window-padding-x = 20
 window-padding-y = 20
 
