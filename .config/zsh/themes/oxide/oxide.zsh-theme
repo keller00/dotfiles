@@ -64,9 +64,8 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
         hook_com[staged]+="%{$oxide_reset_color%} %{$oxide_red%}●"
     fi
 }
-
 # Executed before each prompt.
 add-zsh-hook precmd vcs_info
 
 # Oxide prompt style.
-PROMPT=$'\n%{$oxide_limegreen%}%~%{$oxide_reset_color%} ${vcs_info_msg_0_}\n%(?.%{%F{white}%}.%{$oxide_red%})%(!.#.❯)%{$oxide_reset_color%} '
+PROMPT=$'\n%{$oxide_orange%}$(uname -n)%{$oxide_reset_color%} %{$oxide_limegreen%}%~%{$oxide_reset_color%} ${vcs_info_msg_0_} \n%(?.%{%F{white}%}.%{$oxide_red%})%(!.#.❯)%{$oxide_reset_color%} '
