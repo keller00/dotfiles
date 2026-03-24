@@ -89,4 +89,8 @@ fi
 if [[ -d "${HOME}/.lmstudio/bin" ]]; then
   export PATH="$PATH:${HOME}/.lmstudio/bin"
 fi
+
+if [[ -d "${HOME}/.nix-profile/bin" ]]; then
+  export PATH="${HOME}/.nix-profile/bin:$PATH"
+fi
 # End of LM Studio CLI section
