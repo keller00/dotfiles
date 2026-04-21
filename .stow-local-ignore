@@ -6,6 +6,7 @@
 \.envrc
 \.direnv
 \.stowrc
+\.envrc
 
 # Nix
 shell\.nix
